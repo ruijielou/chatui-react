@@ -1,7 +1,6 @@
 // import { connect } from "react-redux";
 import { HashRouter } from "react-router-dom";
 import Router from "./router"
-import '@chatui/core/es/styles/index.less';
 
 const App = () => {
   return (
