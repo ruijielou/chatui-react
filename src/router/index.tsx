@@ -5,6 +5,7 @@ import { useRoutes } from "react-router-dom";
 import Home from "../views/home";
 import About from "../views/about";
 import Login from "../views/login";
+import SDKChat from "../views/sdk";
 import LayoutComponent from "../components/layout"
 
 const Router = () => {
@@ -19,6 +20,10 @@ const Router = () => {
           {
             path: "/home",
             element: <Home />,
+          },
+          {
+            path: "/sdk",
+            element: <SDKChat />,
           },
           {
             path: "/about",

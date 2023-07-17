@@ -18,7 +18,7 @@ export default defineConfig({
         modifyVars: {
         	"brand-1": "#26890d",
         	"brand-2": "#86bc25",
-        	"brand-3": "#f7ffe9",
+        	"brand-3": "#c1e8b6",
         	"red": "#046a38",
           "bubble-left-border-radius": "4px 20px 20px 20px",
           "bubble-right-border-radius": "20px 4px 20px 20px",

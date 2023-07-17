@@ -3,8 +3,6 @@ import Chat, {
   useMessages,
   Card,
   CardMedia,
-  CardTitle,
-  CardText,
   CardActions,
   Button,
 } from "@chatui/core";
@@ -69,10 +67,6 @@ const Home = () => {
   }
 
   const renderMessageContent = (msg: any) => {
-    console.log(msg);
-
-    // const { content } = msg;
-    // return <Bubble content={content.text} />;
     const { type, content } = msg;
 
     // 根据消息类型来渲染
@@ -83,12 +77,12 @@ const Home = () => {
         return (
           <Card size="xl">
             <CardMedia image="//gw.alicdn.com/tfs/TB1Xv5_vlr0gK0jSZFnXXbRRXXa-427-240.png" />
-            <CardTitle>Card title</CardTitle>
-            <CardText>Card content</CardText>
-            <CardActions>
+            {/* <CardTitle>Card title</CardTitle>
+            <CardText>Card content</CardText> */}
+            {/* <CardActions> */}
               <Button>Default button</Button>
               <Button color="primary">Primary button</Button>
-            </CardActions>
+            {/* </CardActions> */}
           </Card>
         );
       case "image":
@@ -106,6 +100,13 @@ const Home = () => {
     <div className="h-100%">
       <Chat
         navbar={{ title: "智能助理" }}
+        toolbar={[
+          {
+            type: 'speech',
+            icon: 'mic',
+            title: '语音输入'
+          }
+        ]}
         messages={messages}
         quickReplies={defaultQuickReplies}
         renderMessageContent={renderMessageContent}
