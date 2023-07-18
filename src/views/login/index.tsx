@@ -1,15 +1,19 @@
-// import { useState } from 'react'
-// import reactLogo from '../../assets/react.svg'
-// import viteLogo from '/vite.svg'
+import { useDispatch, useSelector } from "react-redux";
+import { add, minus } from "../../store/slice/count";
 
-function Login() {
-//   const [count, setCount] = useState(0)
+const Login = () => {
+  const { count } = useSelector((state: any) => state.counter);
+  const dispatch = useDispatch();
 
   return (
     <>
-    login
+      <button onClick={() => dispatch(add({ type: "conunt/add" }))}>add</button>
+      <div className="text-red">{count}</div>
+      <button onClick={() => dispatch(minus({ type: "conunt/plus" }))}>
+        minus
+      </button>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
